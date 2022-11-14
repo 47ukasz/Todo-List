@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+
+    <div class="todoList">
+        <nav class="todoList__menu">
+            <div class="todoList__menu--header">
+                <button class="todoList__menu--return">
+                    <span class="material-symbols-outlined icon">
+                        arrow_back
+                    </span>
+                </button>
+                Add new task
+                <span class="material-symbols-outlined icon">
+                    settings
+                </span>
+            </div>
+            <form class="todoList__menu--content">
+                <select data-id="type" class="todoList__menu--content-input" name="type">
+                    <option value="personal">Personal</option>
+                    <option value="business">Business</option>
+                </select>
+                <div class="todoList__menu--content-box">
+                    <input data-id="name" placeholder="Name" class="todoList__menu--content-input" type="text">
+                    <button type="button" class="todoList__menu--content-resetBtn">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                </div>
+                <div class="todoList__menu--content-box">
+                    <input data-id="place" placeholder="Place" class="todoList__menu--content-input" type="text">
+                    <button type="button" class="todoList__menu--content-resetBtn">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                </div>
+                <div class="todoList__menu--content-box">
+                    <input data-id="time" type="number" placeholder="Time" class="todoList__menu--content-input"
+                        type="text">
+                    <button type="button" class="todoList__menu--content-resetBtn">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                </div>
+                <p class="todoList__menu--content-errorText"></p>
+            </form>
+            <button class="todoList__menu--confirmBtn">add your task</button>
+        </nav>
+        <div class="todoList__info">
+            <div class="todoList__info--menuSide">
+                <p class="todoList__info--header">Your Things</p>
+                <p class="todoList__info--date"></p>
+                <div class="todoList__info--menuSide-line"></div>
+            </div>
+            <div class="todoList__info--progSite">
+                <div class="todoList__info--progSite-shadow"></div>
+                <div class="todoList__info--counter">
+                    <p class="todoList__info--counter-personal"><span>0</span>
+                        Personal
+                    </p>
+                    <p class="todoList__info--counter-business"><span>0</span>
+                        Business
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="todoList__tasks">
+            <p class="todoList__tasks--header">inbox</p>
+            <div class="todoList__tasks--box"></div>
+            <div class="todoList__tasks--footer">
+                <p class="todoList__tasks--footer-completed">Completed <span>0</span></p>
+                <button class="todoList__tasks--footer-openMenu">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
